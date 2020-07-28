@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+
+// Form
+import { FaPlus } from 'react-icons/fa';
+
 import './Main.css';
 
 // Componentes com estado (statefull) necessitam do método render()
@@ -20,9 +24,15 @@ export default class Main extends Component {
       <div className="main">
         <h1>Lista de tarefas</h1>
 
-        <form action="#">
-          <input type="text" onChange={this.handleMudou} />
-          <button type="submit">Enviar</button>
+        <form action="#" className="form">
+          <input
+            type="text"
+            onChange={this.handleMudou}
+            value={novaTarefa}
+          />
+          <button type="submit">
+            <FaPlus />
+          </button>
         </form>
       </div>
     );
